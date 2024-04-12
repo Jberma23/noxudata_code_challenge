@@ -1,0 +1,87 @@
+export const avatarSrc =
+  "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=3580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+export const avatarAlt = "user avatar image";
+export const headerText = "List my top 10 accounts";
+export const tableHeaders = [
+  { title: "", sortable: true },
+  { title: "Name", sortable: true },
+  { title: "Industry", sortable: false },
+  { title: "City", sortable: true },
+  { title: "State", sortable: true },
+  { title: "Segment", sortable: false },
+  { title: "Owner ID", sortable: true },
+];
+export const tableData = [
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+  {
+    id: "477",
+    name: "Abbott - Pacocha",
+    industry: "IT",
+    city: "Colorado",
+    state: "CO",
+    segment: "Entertainment",
+    ownerId: "7",
+  },
+];
