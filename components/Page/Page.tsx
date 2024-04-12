@@ -6,9 +6,8 @@ import { DashboardHeader } from "../DashboardHeader/DashboardHeader";
 export type PageProps = {};
 
 export const Dashboard: React.FC<PageProps> = ({}) => {
-  // TODO: fix width and padding
   return (
-    <div>
+    <div className="w-[68.75rem]">
       <DashboardHeader />
       <DashboardBody />
       <DashboardFooter />

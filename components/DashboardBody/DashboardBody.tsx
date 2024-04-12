@@ -31,7 +31,6 @@ export const DashboardBody: React.FC<DashboardBodyProps> = ({}) => {
     <PageLayoutBody>
       <HelperButtons />
       <TablePrompt
-        // TODO Icon wrapper class - automatically put in stoke 2 as default + other necessary defauly classes
         icon={<OwlIcon />}
         text={
           "To find out how many accounts you have, you can use the following query:"

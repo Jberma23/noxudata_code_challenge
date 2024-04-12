@@ -1,9 +1,7 @@
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import { ActionButtons } from "../ActionButtons/ActionButtons";
-import { ChatBar } from "../ChatBar/ChatBar";
 import { Button } from "../Button/Button";
+import { ChatBar } from "../ChatBar/ChatBar";
 import { PageLayoutFooter } from "../PageLayout/PageLayout";
 
 export type DashboardFooterProps = {};
