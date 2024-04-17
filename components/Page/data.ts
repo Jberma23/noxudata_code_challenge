@@ -13,7 +13,7 @@ export const tableHeaders = [
 ];
 export const tableData = [
   {
-    id: "477",
+    id: "1",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",
@@ -22,7 +22,7 @@ export const tableData = [
     ownerId: "7",
   },
   {
-    id: "477",
+    id: "2",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",
@@ -31,7 +31,7 @@ export const tableData = [
     ownerId: "7",
   },
   {
-    id: "477",
+    id: "3",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",
@@ -40,7 +40,7 @@ export const tableData = [
     ownerId: "7",
   },
   {
-    id: "477",
+    id: "4",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",
@@ -49,7 +49,7 @@ export const tableData = [
     ownerId: "7",
   },
   {
-    id: "477",
+    id: "5",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",
@@ -58,7 +58,7 @@ export const tableData = [
     ownerId: "7",
   },
   {
-    id: "477",
+    id: "6",
     name: "Abbott - Pacocha",
     industry: "IT",
     city: "Colorado",

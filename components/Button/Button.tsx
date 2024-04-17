@@ -3,7 +3,7 @@ import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { cva, VariantProps } from "cva";
 import { ButtonGroup } from "../ButtonGroup/ButtonGroup";
 
-const ButtonStyles = cva([,], {
+const ButtonStyles = cva([], {
   variants: {
     variant: {
       primary:
@@ -17,6 +17,23 @@ const ButtonStyles = cva([,], {
         "relative inline-flex items-center rounded-r-md px-2 bg-white text-[#F0671A] border-t border-b border-r border-l border-solid border-slate-300 hover:bg-gray-50 focus:z-10 font-semibold",
       chatButton:
         "relative inline-flex items-center rounded-l-md bg-white px-2 py-2 text-slate-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10 font-semibold",
+    },
+    rounded: {
+      none: "",
+      sm: "rounded-sm",
+      md: "rounded-md",
+      lg: "rounded-lg",
+      full: "rounded-full",
+    },
+    borderStyle: {
+      none: "",
+      solid: "border-solid",
+      dotted: "border-dotted",
+    },
+    borderWidth: {
+      sm: "border-2",
+      md: "border-4",
+      lg: "border-8",
     },
   },
   defaultVariants: {

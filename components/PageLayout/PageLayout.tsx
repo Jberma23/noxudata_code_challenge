@@ -12,7 +12,7 @@ export const PageLayoutHeader = ({ children }: { children: ReactNode }) => {
 
 export const PageLayoutBody = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={cx("h-[32.25rem] bg-slate-100 pt-8", pagePadding)}>
+    <div className={cx("min-h-[32.25rem] bg-slate-100 py-8", pagePadding)}>
       {children}
     </div>
   );
