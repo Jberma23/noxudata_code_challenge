@@ -19,7 +19,5 @@ export const PageLayoutBody = ({ children }: { children: ReactNode }) => {
 };
 
 export const PageLayoutFooter = ({ children }: { children: ReactNode }) => {
-  return (
-    <div className={cx("bg-white w-full h-36", pagePadding)}>{children}</div>
-  );
+  return <div className={cx("bg-white w-full", pagePadding)}>{children}</div>;
 };

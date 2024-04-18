@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ChatBar } from "./ChatBar";
+import { Chat } from "./Chat";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/outline";
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
-const meta: Meta<typeof ChatBar> = {
-  title: "ChatBar",
-  component: ChatBar,
+const meta: Meta<typeof Chat> = {
+  title: "Chat",
+  component: Chat,
   args: {
     actionButtonText: "End Chat",
     selectButtonIcon: (
@@ -19,6 +19,6 @@ const meta: Meta<typeof ChatBar> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof ChatBar>;
+type Story = StoryObj<typeof Chat>;
 
 export const Default: Story = {};

@@ -1,7 +1,7 @@
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/outline";
 import { Button } from "../Button/Button";
-import { ChatBar } from "../ChatBar/ChatBar";
+import { Chat } from "../Chat/Chat";
 import { PageLayoutFooter } from "../PageLayout/PageLayout";
 
 export type DashboardFooterProps = {};
@@ -28,7 +28,7 @@ export const DashboardFooter: React.FC<DashboardFooterProps> = () => {
           </Button>
         ))}
       </div>
-      <ChatBar
+      <Chat
         selectionTypeIcon={
           <ChatBubbleOvalLeftIcon className="h-5 w-5" aria-hidden="true" />
         }

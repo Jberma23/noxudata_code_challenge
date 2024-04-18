@@ -17,6 +17,7 @@ const ButtonStyles = cva([], {
         "relative inline-flex items-center rounded-r-md px-2 bg-white text-[#F0671A] border-t border-b border-r border-l border-solid border-slate-300 hover:bg-gray-50 focus:z-10 font-semibold",
       chatButton:
         "relative inline-flex items-center rounded-l-md bg-white px-2 py-2 text-slate-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10 font-semibold",
+      hiddenButton: "bg-white text-slate-900",
     },
     rounded: {
       none: "",
@@ -44,6 +45,8 @@ const ButtonStyles = cva([], {
 export type ButtonProps = {
   children: React.ReactNode;
   styleVariant?: any;
+  label?: string;
+  displayLabel?: boolean;
   clickHandler?: () => void;
 } & VariantProps<typeof ButtonStyles>;
 
@@ -51,6 +54,8 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   styleVariant,
   clickHandler,
+  label,
+  displayLabel,
 }) => {
   return (
     <button
@@ -58,6 +63,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={clickHandler}
       className={ButtonStyles({ variant: styleVariant })}
     >
+      {displayLabel || label ? label : null}
       {children}
     </button>
   );

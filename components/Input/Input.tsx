@@ -1,3 +1,4 @@
+import { Button } from "../Button/Button";
 import { cva, VariantProps } from "cva";
 import React, { HTMLInputTypeAttribute } from "react";
 
@@ -23,12 +24,16 @@ const InputStyles = cva([], {
 export type InputProps = {
   inputStyleVariants?: "primary";
   wrapperStyleVariants?: "primary";
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   type: HTMLInputTypeAttribute;
   name: string;
   id: string;
   placeholder?: string;
   ariaDescribedBy?: string;
+  onChange: (text: string) => void;
+  clickableIcon?: boolean;
+  iconClickHandler?: () => void;
+  value: string;
 } & VariantProps<typeof InputStyles>;
 
 export const Input: React.FC<InputProps> = ({
@@ -40,6 +45,10 @@ export const Input: React.FC<InputProps> = ({
   id,
   placeholder,
   ariaDescribedBy,
+  onChange,
+  clickableIcon,
+  iconClickHandler,
+  value,
 }) => {
   return (
     <span className={wrapperStyles({ styleVariants: wrapperStyleVariants })}>
@@ -47,11 +56,25 @@ export const Input: React.FC<InputProps> = ({
         type={type}
         name={name}
         id={id}
+        value={value}
         className={InputStyles({ styleVariants: inputStyleVariants })}
         placeholder={placeholder}
         aria-describedby={ariaDescribedBy}
+        onChange={(e) => {
+          onChange(e.target.value);
+        }}
       ></input>
-      {icon}
+      {clickableIcon ? (
+        <Button
+          clickHandler={iconClickHandler}
+          displayLabel={false}
+          styleVariant={"hiddenButton"}
+        >
+          {icon}
+        </Button>
+      ) : (
+        icon
+      )}
     </span>
   );
 };
