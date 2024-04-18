@@ -4,10 +4,10 @@ import { CardHeader } from "./CardHeader";
 
 type CardProps = {
   children: React.ReactNode;
-  classes?: string;
+  className?: string;
 };
-const Card = ({ children, classes }: CardProps) => {
-  return <div className={classes}>{children}</div>;
+const Card = ({ children, className }: CardProps) => {
+  return <div className={className}>{children}</div>;
 };
 Card.Header = CardHeader;
 Card.Body = CardBody;
