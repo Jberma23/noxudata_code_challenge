@@ -26,12 +26,28 @@ export const Chat: React.FC<ChatProps> = ({
     if (socket.connected) {
       onConnect();
     }
-    socket.on("newIncomingChat", (data: { message: string }) => {
-      const pTag = document.createElement("p");
-      pTag.innerText = data.message;
-      const chatBox = document.getElementById("chat-box");
-      chatBox?.appendChild(pTag);
-    });
+    socket.on(
+      "newIncomingChat",
+      (data: { user: string; message: string; date: string }) => {
+        const div1 = document.createElement("div");
+        const pTag = document.createElement("p");
+        const span1 = document.createElement("span");
+        span1.className = "flex justify-between";
+        const span2 = document.createElement("span");
+        span2.className = "text-xs text-slate-400";
+        const span3 = document.createElement("span");
+        span3.className = "text-xs text-slate-400";
+        span2.innerText = data.user;
+        span3.innerText = new Date(data.date).toLocaleString();
+        pTag.innerText = data.message;
+        div1.appendChild(pTag);
+        div1.appendChild(span1);
+        span1.appendChild(span2);
+        span1.appendChild(span3);
+        const chatBox = document.getElementById("chat-box");
+        chatBox?.appendChild(div1);
+      }
+    );
 
     function onConnect() {
       setIsConnected(true);
@@ -84,7 +100,11 @@ export const Chat: React.FC<ChatProps> = ({
           }}
           clickableIcon={true}
           iconClickHandler={() => {
-            socket.emit("newChat", { message: chatText });
+            socket.emit("newChat", {
+              user: "user-1",
+              message: chatText,
+              date: new Date(),
+            });
             setChatText("");
           }}
         />

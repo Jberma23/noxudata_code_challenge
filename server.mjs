@@ -23,7 +23,9 @@ app.prepare().then(() => {
   io.on("connection", (socket) => {
     socket.on("newChat", function (data) {
       io.emit("newIncomingChat", {
+        user: data.user,
         message: data.message,
+        date: data.date,
       });
     });
   });
