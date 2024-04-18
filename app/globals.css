@@ -12,3 +12,6 @@
     @apply py-2;
   }
 }
+#chat-box:empty {
+  display: none;
+}
